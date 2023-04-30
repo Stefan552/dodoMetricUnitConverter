@@ -1,7 +1,10 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 public class Converter extends JFrame {
@@ -70,6 +73,8 @@ public class Converter extends JFrame {
 
         setDefaultCloseOperation ( WindowConstants.EXIT_ON_CLOSE );
         setTitle ( "Converter " );
+        BufferedImage image = ImageIO.read(new File ("src/main/resources/image1.png"));
+        setIconImage (image);
 
 
         jLabel1.setBackground ( new Color ( 21 , 173 , 130 ) );
